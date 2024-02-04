@@ -1,0 +1,411 @@
+
+/*
+Awesome Lea Verou's Heart Pattern Background
+---- */
+/*Amazing Original Code fron Angela Velasquez
+Thanks! Here is here pen:https://codepen.io/AngelaVelasquez/pen/bEzYqb*/
+/* Think this is cool? Check out my other stuff: http://yjangwynter.com*/
+body {
+	background:
+radial-gradient(circle closest-side at 60% 43%, #323232 26%, rgba(187,0,51,0) 27%),
+radial-gradient(circle closest-side at 40% 43%, #323232 26%, rgba(187,0,51,0) 27%),
+			/* Pink Hearts */
+radial-gradient(circle closest-side at 40% 22%, #27E8CB 45%, rgba(221,51,85,0) 46%),
+radial-gradient(circle closest-side at 60% 22%, #27E8CB 45%, rgba(221,51,85,0) 46%),
+radial-gradient(circle closest-side at 50% 35%,  #27E8CB 30%, rgba(221,51,85,0) 31%),
+
+radial-gradient(circle closest-side at 60% 43%, #323232 26%, rgba(187,0,51,0) 27%) 50px 50px,
+radial-gradient(circle closest-side at 40% 43%, #323232 26%, rgba(187,0,51,0) 27%) 50px 50px,
+		/* Grey Hearts */
+radial-gradient(circle closest-side at 40% 22%, #777777 45%, rgba(221,51,85,0) 46%) 50px 50px,
+radial-gradient(circle closest-side at 60% 22%, #777777 45%, rgba(221,51,85,0) 46%) 50px 50px,
+radial-gradient(circle closest-side at 50% 35%, #777777 30%, rgba(221,51,85,0) 31%) 50px 50px;
+	background-color:#323232;
+	background-size:100px 100px;
+	font-family: 'Lato', sans-serif;
+}
+
+/*
+Valentine's Pen
+---- */
+
+.centered {
+	width: 100%;
+	margin: 12vh auto;
+	text-align: center;
+	visibility: visible;
+	display: block;
+}
+
+.centered2 {
+	width: 100%;
+	margin: 12vh auto;
+	text-align: center;
+	visibility: hidden;
+	display: none;
+}
+
+.centered h4 {
+	color:  #FFFFFF;
+	font-size: 4em;
+	font-weight: bold;
+}
+.centered h5{
+	color: #FFFFFF;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.centered2 h4 {
+	color:  #FFFFFF;
+	font-size: 4em;
+	font-weight: bold;
+}
+ input[type=checkbox]{
+  display:none;
+ }
+
+.no-button {
+    background-color: #D8124B;
+}
+
+.yes-button {
+    background-color: #17DE09;
+}
+
+
+.myVideo {
+	margin: 100px 0px 0px 0px;
+  min-height: 100%;
+}
+
+.yesVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.between {
+	margin: 50px 0px 0px 0px;
+}
+
+/* #myVideo-left {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-height: 100%;
+}
+*/
+
+
+.yes-button {
+    transition: .5s;
+	height: 60px;
+	width: auto;
+	padding: 0px 40px;
+	cursor: pointer;
+	margin: 0px 0px 0px -330px;
+	border-radius: 5px;
+	color: #FFFFFF;
+	font-size: 1.5em;
+	line-height: 1.5em;
+	text-transform: uppercase;
+	transition: all .25s ease-in-out;
+}
+
+.no-button {
+    position: absolute;
+    z-index: 999;
+    transition: .5s;
+	height: 60px;
+	width: auto;
+	padding: 10px 40px;
+	cursor: pointer;
+	border-radius: 5px;
+	color: #FFFFFF;
+	font-size: 1.5em;
+	line-height: 1.5em;
+	text-transform: uppercase;
+	transition: all .25s ease-in-out;
+}
+
+
+.yes-button:hover {
+	transform: 	scale(1.1,1.1);
+}
+
+.no-button:hover {
+	transform: 	scale(1.1,1.1);
+}
+
+.no {
+	background-color: #D8124B;
+}
+
+.yes {
+	background-color: #17DE09;
+}
+
+
+/*Heart*/
+
+
+#heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+    animation: heartbeat 1s infinite;
+    margin:0 auto
+}
+#heart:before,
+#heart:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: #ff0000;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+       -moz-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+         -o-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+}
+#heart:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+       -moz-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+         -o-transform-origin: 100% 100%;
+            transform-origin :100% 100%;
+}
+
+
+
+@keyframes heartbeat
+{
+  0%
+  {
+    transform: scale( .75 );
+  }
+  20%
+  {
+    transform: scale( 1 );
+  }
+  40%
+  {
+    transform: scale( .75 );
+  }
+  60%
+  {
+    transform: scale( 1 );
+  }
+  80%
+  {
+    transform: scale( .75 );
+  }
+  100%
+  {
+    transform: scale( .75 );
+  }
+}
+
+
+/*
+Signature
+---- */
+
+.signature {
+	position: absolute;
+	margin: auto;
+	bottom: 0;
+	top: 110vh;
+	left:3vw;
+	width: 95%;
+
+}
+
+.signature p{
+	margin-top:10px;
+	text-align: center;
+
+	font-family: Helvetica, Arial, Sans-Serif;
+	font-size: 1em;
+	color: #FFFFFF;
+}
+
+.signature .much-heart{
+	display: inline-block;
+	position: relative;
+	margin: 0 4px;
+	height: 10px;
+	width: 10px;
+	background: #FF84C4;
+	border-radius: 4px;
+	-ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.signature .much-heart::before,
+.signature .much-heart::after {
+	  display: block;
+  content: '';
+  position: absolute;
+  margin: auto;
+  height: 10px;
+  width: 10px;
+  border-radius: 5px;
+  background: #FF84C4;
+  top: -4px;
+}
+
+.signature .much-heart::after {
+	bottom: 0;
+	top: auto;
+	left: -4px;
+}
+
+.signature a {
+	color:#FF84C4;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.signature a:hover {
+	color: coral;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+
+
+/* CSS Heart */
+.heart{
+  position: relative;
+  width: 200px;
+	top:100px;
+	left:44vw;
+  height: 200px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  background-color: rgba(188, 143, 143, 1);
+	   animation-name: rainbow-bottom;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@media only screen and (max-width: 1600px){
+	.heart{
+		left:40vw;
+	}
+}
+@media only screen and (max-width: 1000px){
+	.heart{
+		left:36vw;
+	}
+}
+@media only screen and (max-width: 500px){
+	.heart{
+		left:24vw;
+		width:200px;
+		height:200px;
+	}
+}
+
+.heart::after {
+   background-color: rgba(188, 143, 143, 1);
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 0px;
+  left: -100px;
+		   animation-name: rainbow-left;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+.heart::before {
+  content:'';
+   background-color: rgba(188, 143, 143, 1);
+  border-radius: 50%;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: -100px;
+  left: 0px;
+		   animation-name: rainbow-right;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+/* CSS Heart Animations */
+@keyframes rainbow-bottom{
+	0%{
+		background-color: #FF84C4;
+	}
+	25%{
+		background-color:#924DE8;
+	}
+	50%{
+		background-color:#1E6EFF;
+	}
+	75%{
+		background-color:#27E8CB;
+	}
+100%{
+			background-color:#2EFF2E;
+		}
+}
+@keyframes rainbow-left{
+	0%{
+		background-color: #FF84C4;
+	}
+	25%{
+		background-color:#924DE8;
+	}
+	50%{
+		background-color:#1E6EFF;
+	}
+	75%{
+		background-color:#27E8CB;
+	}
+100%{
+			background-color:#2EFF2E;
+		}
+}
+@keyframes rainbow-right{
+	0%{
+		background-color: #FF84C4;
+	}
+	25%{
+		background-color:#924DE8;
+	}
+	50%{
+		background-color:#1E6EFF;
+	}
+	75%{
+		background-color:#27E8CB;
+	}
+100%{
+			background-color:#2EFF2E;
+		}
+}
