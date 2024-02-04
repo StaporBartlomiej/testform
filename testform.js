@@ -1,3 +1,6 @@
+const startVideo = document.getElementById('myVideo');
+startVideo.load();
+startVideo.play();
 function noFunction() {
     const button = document.getElementById('No');
     button.style.left = `${Math.ceil(Math.random() * 90)}%`;
